@@ -15,4 +15,6 @@ redisClient.on("error", (err) => {
 
 await redisClient.connect();
 
+console.log("Redis connected");
+
 export default redisClient;
