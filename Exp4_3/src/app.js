@@ -8,11 +8,15 @@ const app = express();
 app.use(helmet());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Seat Locking API is running 🚀");
+});
+
 //app.use(
- // rateLimit({
- //   windowMs: 60 * 1000,
- //   max: 100,
- // })
+// rateLimit({
+//   windowMs: 60 * 1000,
+//   max: 100,
+// })
 //);
 
 app.use("/api/seats", seatRoutes);
